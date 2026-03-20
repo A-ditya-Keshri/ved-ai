@@ -1,0 +1,31 @@
+{
+  "name": "ved-ai-backend",
+  "version": "1.0.0",
+  "description": "AI Assessment Creator Backend",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "worker": "ts-node-dev --respawn --transpile-only src/workers/generationWorker.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^1.46.0",
+    "bullmq": "^5.31.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "mongoose": "^8.9.5",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/uuid": "^10.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
